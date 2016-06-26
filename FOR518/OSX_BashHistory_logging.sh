@@ -3,6 +3,11 @@
 # Author Ryan Nolette
 # Date Modified 06/18/2016
 ################################################################################
+#check to see if script is being run as root
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
 # - configure security logging
 #backup /etc/audit/audit.rules
 cp /etc/audit/audit.rules /etc/audit/audit.rules.bk
