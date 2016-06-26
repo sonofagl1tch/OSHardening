@@ -1,4 +1,7 @@
 #!/bin/bash
+# Additional security logging features for OSX 10.10 Yosemite
+# Author Ryan Nolette
+# Date Modified 06/18/2016
 ################################################################################
 # - configure security logging
 #backup /etc/audit/audit.rules
