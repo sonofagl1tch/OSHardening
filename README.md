@@ -2,8 +2,7 @@
 This repo contains all of my OS hardening scripts
 
 ## SANS FOR518
-#### OSX bashrc additional logging configuration changes
-This directory contains a snippet of my larger OS hardening scripts for the SANS FOR518 class.
+This directory contains a snippet of my larger OS hardening scripts for the SANS FOR518 class. These changes are specific to OSX bashrc additional logging configuration.
 
 ## Centos 6
 #### Additional Security Configurations
