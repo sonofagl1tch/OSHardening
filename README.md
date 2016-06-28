@@ -29,6 +29,9 @@ These are additional security configuration changes that i suggest be made to ce
  - This script will audit a OSX 10.10 Yosemite system and give you a CIS compliance score based on it's findings.
 - CIS_OSX_Yosemite_Server_Hardening.sh
  - This script will harden a fresh build OSX 10.10 Yosemite system to CIS compliance.
+
+#### Additional Security Configurations
+These are additional scripts that i suggest be used on OSX systems. I have included these outside of the CIS hardening script in the event that you do not want to use CIS for compliance but want some benefits of locking down your system anyways.
 - UseAppleScriptToTurnOffServices.sh
  - This script give examples of how to use applescript to emulate configuration of the OSX system that cannot be done via CLI. THis basically emulates a user clicking these items. 
 - instalDMGFromCLI.sh
