@@ -24,4 +24,12 @@ These are additional security configuration changes that i suggest be made to ce
 - ConfigureSSH.sh
  - Configures the SSH server for most common hardening settings
 
- 
+## OSX 10.10 Yosemite
+- CIS_OSX_Yosemite_Server_Audit.sh
+ - This script will audit a OSX 10.10 Yosemite system and give you a CIS compliance score based on it's findings.
+- CIS_OSX_Yosemite_Server_Hardening.sh
+ - This script will harden a fresh build OSX 10.10 Yosemite system to CIS compliance.
+- UseAppleScriptToTurnOffServices.sh
+ - This script give examples of how to use applescript to emulate configuration of the OSX system that cannot be done via CLI. THis basically emulates a user clicking these items. 
+- instalDMGFromCLI.sh
+ - This script demonstrates how to install a DMG from CLI or a bash script
