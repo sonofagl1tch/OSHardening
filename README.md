@@ -3,6 +3,10 @@ This repo contains all of my OS hardening scripts
 
 ## SANS FOR518
 This directory contains a snippet of my larger OS hardening scripts for the SANS FOR518 class. These changes are specific to OSX bashrc additional logging configuration.
+- AdditionalOSXAppsIUse.csv
+ - CSV list of the tools i install on a fresh OSX build to make my life easier 
+- OSX_BashHistory_logging.sh
+ - added additional logic to check if script is running with elevated privs or not. Script will now exit if it is not running with root privs.
 
 ## Centos 6
 - CIS_Centos6_Audit.sh
