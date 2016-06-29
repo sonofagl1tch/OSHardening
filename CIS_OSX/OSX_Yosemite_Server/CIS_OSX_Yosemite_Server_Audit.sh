@@ -485,7 +485,7 @@ audit_Exception "$auditStep" "$auditCmd"
 #Security 1.1 - join system to domain
 auditStep="Security.1.1 system joined to domain"
 #auditCmd=`dsconfigad -show | grep "domain.local"`
-auditCmd=`/usr/local/bin/adinfo | grep -i "domain.local"`
+auditCmd=` | grep -i "domain.local"`
 audit_WithOutput "$auditStep" "$auditCmd"
 #Security 1.2 - install Casper
 auditStep="Security.1.2 Casper installed"
