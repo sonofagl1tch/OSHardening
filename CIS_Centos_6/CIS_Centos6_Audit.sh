@@ -861,7 +861,8 @@ auditCmd=`grep "^Ciphers aes128-ctr,aes192-ctr,aes256-ctr" /etc/ssh/sshd_config`
 audit_WithOutput "$auditStep" "$auditCmd"
 #6.2.12 Set Idle Timeout Interval for User Login (Scored)
 auditStep="6.2.12 Set Idle Timeout Interval for User Login (Scored)"
-auditCmd=`grep "^ClientAliveInterval 300" /etc/ssh/sshd_config && grep "^ClientAliveCountMax 0" /etc/ssh/sshd_config`
+#extended session timeout from 300 seconds (5minutes) to 900 seconds (15 minutes)
+auditCmd=`grep "^ClientAliveInterval 900" /etc/ssh/sshd_config && grep "^ClientAliveCountMax 0" /etc/ssh/sshd_config`
 audit_WithOutput "$auditStep" "$auditCmd"
 #6.2.13 Limit Access via SSH (Scored)
 # grep "^AllowUsers" /etc/ssh/sshd_config

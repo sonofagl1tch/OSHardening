@@ -1156,7 +1156,8 @@ RhostsRSAAuthentication no
 LogLevel INFO
 PermitUserEnvironment no
 Ciphers aes128-ctr,aes192-ctr,aes256-ctr
-ClientAliveInterval 300
+##extended session timeout from 300 seconds (5minutes) to 900 seconds (15 minutes)
+ClientAliveInterval 900
 ClientAliveCountMax 0
 MaxAuthTries 4
 PermitEmptyPasswords no
