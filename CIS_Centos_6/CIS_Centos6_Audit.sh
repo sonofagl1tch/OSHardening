@@ -439,7 +439,7 @@ auditCmd=`grep -E "net.ipv4.ip_forward\s+=\s+0" /etc/sysctl.conf`
 audit_WithOutput "$auditStep" "$auditCmd"
 #4.1.2 Disable Send Packet Redirects (Scored)
 auditStep="4.1.2 Disable Send Packet Redirects (Scored)"
-auditCmd=`grep -E "net.ipv4.conf.all.send_redirects=0|net.ipv4.conf.default.send_redirects=0" /etc/sysctl.conf` 
+auditCmd=`grep -E "net.ipv4.conf.all.send_redirects\s+=\s+0|net.ipv4.conf.default.send_redirects\s+=\s+0" /etc/sysctl.conf` 
 audit_WithOutput "$auditStep" "$auditCmd"
 #####################################################################
 #4.2 Modify Network Parameters (Host and Router)
@@ -449,23 +449,23 @@ auditCmd=`grep -E "net.ipv4.conf.all.accept_source_route\s+=\s+0|net.ipv4.conf.d
 audit_WithOutput "$auditStep" "$auditCmd"
 #4.2.2 Disable ICMP Redirect Acceptance (Scored)
 auditStep="4.2.2 Disable ICMP Redirect Acceptance (Scored)"
-auditCmd=`grep -E "net.ipv4.conf.all.accept_redirects=0|net.ipv4.conf.default.accept_redirects=0" /etc/sysctl.conf`
+auditCmd=`grep -E "net.ipv4.conf.all.accept_redirects\s+=\s+0|net.ipv4.conf.default.accept_redirects\s+=\s+0" /etc/sysctl.conf`
 audit_WithOutput "$auditStep" "$auditCmd"
 #4.2.3 Disable Secure ICMP Redirect Acceptance (Scored)
 auditStep="4.2.3 Disable Secure ICMP Redirect Acceptance (Scored)"
-auditCmd=`grep -E "net.ipv4.conf.all.secure_redirects=0|net.ipv4.conf.default.secure_redirects=0" /etc/sysctl.conf`
+auditCmd=`grep -E "net.ipv4.conf.all.secure_redirects\s+=\s+0|net.ipv4.conf.default.secure_redirects\s+=\s+0" /etc/sysctl.conf`
 audit_WithOutput "$auditStep" "$auditCmd"
 #4.2.4 Log Suspicious Packets (Scored)
 auditStep="4.2.4 Log Suspicious Packets (Scored)"
-auditCmd=`grep -E "net.ipv4.conf.all.log_martians=1|net.ipv4.conf.default.log_martians=1" /etc/sysctl.conf`
+auditCmd=`grep -E "net.ipv4.conf.all.log_martians\s+=\s+1|net.ipv4.conf.default.log_martians\s+=\s+1" /etc/sysctl.conf`
 audit_WithOutput "$auditStep" "$auditCmd"
 #4.2.5 Enable Ignore Broadcast Requests (Scored)
 auditStep="4.2.5 Enable Ignore Broadcast Requests (Scored)"
-auditCmd=`grep -E "net.ipv4.icmp_echo_ignore_broadcasts=1" /etc/sysctl.conf`
+auditCmd=`grep -E "net.ipv4.icmp_echo_ignore_broadcasts\s+=\s+1" /etc/sysctl.conf`
 audit_WithOutput "$auditStep" "$auditCmd"
 #4.2.6 Enable Bad Error Message Protection (Scored)
 auditStep="4.2.6 Enable Bad Error Message Protection (Scored)"
-auditCmd=`grep -E "net.ipv4.icmp_ignore_bogus_error_responses=1" /etc/sysctl.conf`
+auditCmd=`grep -E "net.ipv4.icmp_ignore_bogus_error_responses\s+=\s+1" /etc/sysctl.conf`
 audit_WithOutput "$auditStep" "$auditCmd"
 #4.2.7 Enable RFC-recommended Source Route Validation (Scored)
 auditStep="4.2.7 Enable RFC-recommended Source Route Validation (Scored)"
