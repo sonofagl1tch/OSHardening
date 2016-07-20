@@ -24,11 +24,18 @@ These are additional security configuration changes that i suggest be made to ce
 - ConfigureSSH.sh
  - Configures the SSH server for most common hardening settings
 
-## OSX 10.10 Yosemite
+## OSX
+#### OSX 10.10 Yosemite
 - CIS_OSX_Yosemite_Server_Audit.sh
  - This script will audit a OSX 10.10 Yosemite system and give you a CIS compliance score based on it's findings.
 - CIS_OSX_Yosemite_Server_Hardening.sh
  - This script will harden a fresh build OSX 10.10 Yosemite system to CIS compliance.
+
+#### OSX 10.11 El Capitan
+- CIS_MacOSX_1011_Audit-Servers.sh
+ - This script will audit a OSX 10.11 El Capitan system and give you a CIS compliance score based on it's findings.
+- CIS_MacOSX_1011_Hardening-Servers.sh
+ - This script will harden a fresh build OSX 10.11 El Capitan system to CIS compliance.
 
 #### Additional Security Configurations
 These are additional scripts that i suggest be used on OSX systems. I have included these outside of the CIS hardening script in the event that you do not want to use CIS for compliance but want some benefits of locking down your system anyways.
