@@ -8,13 +8,14 @@ This directory contains a snippet of my larger OS hardening scripts for the SANS
 - OSX_BashHistory_logging.sh
  - added additional logic to check if script is running with elevated privs or not. Script will now exit if it is not running with root privs.
 
-## Centos 6
+## Linux
+### Centos 6
 - CIS_Centos6_Audit.sh
  - This script will audit a centos 6 system and give you a CIS compliance score based on it's findings.
 - CIS_Centos6_Hardening.sh 
  - This script will harden a fresh build Centos 6 minimal system to CIS compliance.
 
-#### Additional Security Configurations
+### Additional Security Configurations
 These are additional security configuration changes that i suggest be made to centos/RHEL linux systems. I have included these outside of the CIS hardening script in the event that you do not want to use CIS for compliance but want some benefits of locking down your system anyways.
 
 - AdditionalSecurityLogging.sh
@@ -25,19 +26,19 @@ These are additional security configuration changes that i suggest be made to ce
  - Configures the SSH server for most common hardening settings
 
 ## OSX
-#### OSX 10.10 Yosemite
+### OSX 10.10 Yosemite
 - CIS_OSX_Yosemite_Server_Audit.sh
  - This script will audit a OSX 10.10 Yosemite system and give you a CIS compliance score based on it's findings.
 - CIS_OSX_Yosemite_Server_Hardening.sh
  - This script will harden a fresh build OSX 10.10 Yosemite system to CIS compliance.
 
-#### OSX 10.11 El Capitan
+### OSX 10.11 El Capitan
 - CIS_MacOSX_1011_Audit-Servers.sh
  - This script will audit a OSX 10.11 El Capitan system and give you a CIS compliance score based on it's findings.
 - CIS_MacOSX_1011_Hardening-Servers.sh
  - This script will harden a fresh build OSX 10.11 El Capitan system to CIS compliance.
 
-#### Additional Security Configurations
+### Additional Security Configurations
 These are additional scripts that i suggest be used on OSX systems. I have included these outside of the CIS hardening script in the event that you do not want to use CIS for compliance but want some benefits of locking down your system anyways.
 - UseAppleScriptToTurnOffServices.sh
  - This script give examples of how to use applescript to emulate configuration of the OSX system that cannot be done via CLI. THis basically emulates a user clicking these items. 
