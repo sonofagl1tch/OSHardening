@@ -46,3 +46,5 @@ These are additional scripts that i suggest be used on OSX systems. I have inclu
  - This script demonstrates how to install a DMG from CLI or a bash script
 - CreateMacAdmin.sh
  - This script is used to add a hidden admin user to an OSX system
+- GetLastPasswordModificationTimeOfLocalUser.sh
+ - This script is used to This script will query and OSX el capitan system for the last password modification timestamp in mac epoch format
