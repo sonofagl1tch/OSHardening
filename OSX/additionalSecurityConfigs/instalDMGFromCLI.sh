@@ -9,7 +9,7 @@ echo "DA username fo join: "
 read DAuser
 
 #join system to domain
-dsconfigad -a $hostname -u $DAuser -ou "CN=Computers,DC=network,DC=bit9,DC=local" -domain bit9.local -mobile enable -localhome enable -groups "Domain Admins,Enterprise Admins" -alldomains enable
+dsconfigad -a $hostname -u $DAuser -ou "CN=Computers,DC=network,DC=domain,DC=com" -domain domain.com -mobile enable -localhome enable -groups "Domain Admins,Enterprise Admins" -alldomains enable
 
 
 #mounting dmg
