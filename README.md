@@ -44,3 +44,5 @@ These are additional scripts that i suggest be used on OSX systems. I have inclu
  - This script give examples of how to use applescript to emulate configuration of the OSX system that cannot be done via CLI. THis basically emulates a user clicking these items. 
 - instalDMGFromCLI.sh
  - This script demonstrates how to install a DMG from CLI or a bash script
+- CreateMacAdmin.sh
+ - This script is used to add a hidden admin user to an OSX system
