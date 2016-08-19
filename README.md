@@ -4,7 +4,7 @@ This repo contains all of my OS hardening scripts
 ## SANS FOR518
 This directory contains a snippet of my larger OS hardening scripts for the SANS FOR518 class. These changes are specific to OSX bashrc additional logging configuration.
 - AdditionalOSXAppsIUse.csv
- - CSV list of the tools i install on a fresh OSX build to make my life easier 
+ - CSV list of the tools i install on a fresh OSX build to make my life easier
 - OSX_BashHistory_logging.sh
  - added additional logic to check if script is running with elevated privs or not. Script will now exit if it is not running with root privs.
 
@@ -12,7 +12,7 @@ This directory contains a snippet of my larger OS hardening scripts for the SANS
 ### Centos 6
 - CIS_Centos6_Audit.sh
  - This script will audit a centos 6 system and give you a CIS compliance score based on it's findings.
-- CIS_Centos6_Hardening.sh 
+- CIS_Centos6_Hardening.sh
  - This script will harden a fresh build Centos 6 minimal system to CIS compliance.
 
 ### Additional Security Configurations
@@ -24,6 +24,8 @@ These are additional security configuration changes that i suggest be made to ce
  - Configures iptables to defend against common attacks
 - ConfigureSSH.sh
  - Configures the SSH server for most common hardening settings
+- doesUserExist.sh
+ - simple test to see if a local user exists
 
 ## OSX
 ### OSX 10.10 Yosemite
@@ -41,7 +43,7 @@ These are additional security configuration changes that i suggest be made to ce
 ### Additional Security Configurations
 These are additional scripts that i suggest be used on OSX systems. I have included these outside of the CIS hardening script in the event that you do not want to use CIS for compliance but want some benefits of locking down your system anyways.
 - UseAppleScriptToTurnOffServices.sh
- - This script give examples of how to use applescript to emulate configuration of the OSX system that cannot be done via CLI. THis basically emulates a user clicking these items. 
+ - This script give examples of how to use applescript to emulate configuration of the OSX system that cannot be done via CLI. THis basically emulates a user clicking these items.
 - instalDMGFromCLI.sh
  - This script demonstrates how to install a DMG from CLI or a bash script
 - CreateMacAdmin.sh
