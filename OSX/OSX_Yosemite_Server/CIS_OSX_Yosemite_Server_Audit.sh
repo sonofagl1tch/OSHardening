@@ -39,15 +39,15 @@ auditStep="1.1 Verify all application software is current (Scored)"
 authdCmd=``
 audit_Exception "$auditStep" "$auditCmd"
 #1.2 Enable Auto Update (Scored)
-auditStep="1.2 Enable Auto Update (Scored)" 
+auditStep="1.2 Enable Auto Update (Scored)"
 auditCmd=`defaults read /Library/Preferences/com.apple.SoftwareUpdate AutomaticCheckEnabled |grep 1`
 audit_WithOutput "$auditStep" "$auditCmd"
 #1.3 Enable app update installs (Scored)
-auditStep="1.3 Enable app update installs (Scored)" 
+auditStep="1.3 Enable app update installs (Scored)"
 auditCmd=`defaults read /Library/Preferences/com.apple.storeagent.plist |grep 1`
 audit_WithOutput  "$auditStep" "$auditCmd"
-#1.4 Enable system data files and security update installs (Scored)  
-auditStep="1.4 Enable system data files and security update installs (Scored)" 
+#1.4 Enable system data files and security update installs (Scored)
+auditStep="1.4 Enable system data files and security update installs (Scored)"
 auditCmd=`defaults read /Library/Preferences/com.apple.SoftwareUpdate | egrep '(ConfigDataInstall = 1 |CriticalUpdateInstall = 1)'`
 #Make sure the result is: ConfigDataInstall = 1; CriticalUpdateInstall = 1
 audit_WithOutput  "$auditStep" "$auditCmd"
@@ -87,7 +87,7 @@ auditCmd=`defaults -currentHost read com.apple.screensaver |grep -E "idleTime\s+
 audit_WithOutput "$auditStep" "$auditCmd"
 #2.3.2 Secure screen saver corners (Scored)
 #exception because of servers
-auditStep="2.3.2 Secure screen saver corners (Scored)" 
+auditStep="2.3.2 Secure screen saver corners (Scored)"
 #auditCmd=`defaults read /Library/Preferences/com.apple.dock | grep -i corner`
 auditCmd=``
 audit_Exception "$auditStep - casper enforced" "$auditCmd"
@@ -132,13 +132,13 @@ audit_WithNoOutput "$auditStep" "$auditCmd"
 #2.4.7 Disable Bluetooth Sharing (Scored)
 auditStep="2.4.7 Disable Bluetooth Sharing (Scored)"
 auditCmd=`system_profiler SPBluetoothDataType | grep -E "State: Enabled"`
-audit_WithNoOutput "$auditStep" "$auditCmd" 
+audit_WithNoOutput "$auditStep" "$auditCmd"
 #2.4.8 Disable File Sharing (Scored)
 auditStep="2.4.8 Disable File Sharing (Scored)"
 auditCmd=`launchctl list | egrep AppleFileServer`
 audit_WithNoOutput "$auditStep" "$auditCmd"
 #2.4.9 Disable Remote Management (Scored)
-auditStep="2.4.9 Disable Remote Management (Scored)"  
+auditStep="2.4.9 Disable Remote Management (Scored)"
 auditCmd=`ps -ef | egrep ARDAgent | grep -Eiv "grep ARDAgent"`
 audit_WithNoOutput "$auditStep" "$auditCmd"
 ##########################
@@ -194,7 +194,7 @@ auditStep="2.7.3 iCloud Drive (Scored)"
 authdCmd=``
 audit_Exception "$auditStep" "$auditCmd"
 ##########################
-#2.8 Pair the remote control infrared receiver if enabled (Scored) 
+#2.8 Pair the remote control infrared receiver if enabled (Scored)
 auditStep="2.8 Pair the remote control infrared receiver if enabled (Scored)" #This is not applicable because servers do not utilize infrared technology.
 auditCmd=`defaults read /Library/Preferences/com.apple.driver.AppleIRController | grep -E "DeviceEnabled\s+=\s+0;"`
 audit_WithOutput "$auditStep" "$auditCmd"
@@ -252,7 +252,7 @@ audit_WithOutput "$auditStep" "$auditCmd"
 ####################################################
 #4 Network Configurations
 #4.1 Enable "Show Wi-Fi status in menu bar" (Scored)
-auditStep="4.1 Enable Show Wi-Fi status in menu bar (Scored) - no wifi on servers" 
+auditStep="4.1 Enable Show Wi-Fi status in menu bar (Scored) - no wifi on servers"
 #auditCmd=`defaults read com.apple.systemuiserver menuExtras | grep AirPort.menu
 auditCmd=``
 audit_Exception "$auditStep" "$auditCmd"
@@ -322,7 +322,7 @@ audit_Exception "$auditStep" "$auditCmd"
 #5.5 Enable OCSP and CRL certificate checking (Scored)
 auditStep="5.5 Enable OCSP and CRL certificate checking (Scored)"
 auditCmd=`defaults read com.apple.security.revocation | egrep "CRLStyle = RequireIfPresent;|OCSPStyle = RequireIfPresent;"`
-#This gives both output results for OCSPStyle and CRLStyle 
+#This gives both output results for OCSPStyle and CRLStyle
 audit_WithOutput "$auditStep" "$auditCmd"
 ##########################
 #5.6 Do not enable the "root" account (Scored)
@@ -367,7 +367,7 @@ audit_WithOutput "$auditStep" "$auditCmd"
 ##########################
 #5.14 Set a minimum password length (Scored)
 auditStep="5.14 Set a minimum password length (Scored)"
-auditCmd=`pwpolicy -getglobalpolicy | tr " " "\n" | grep -i "minChars=15"`
+auditCmd=`pwpolicy -getglobalpolicy | tr " " "\n" | grep -i "minChars=12"`
 audit_WithOutput "$auditStep" "$auditCmd"
 ##########################
 #5.15 Configure account lockout threshold (Scored)
@@ -509,7 +509,7 @@ auditCmd=`grep "NOPASSWD" /etc/sudoers | grep -v '#'`
 audit_WithNoOutput "$auditStep" "$auditCmd"
 # #####################################################################
 # # Security.2 llow auditd to get the calling user's uid correctly when calling sudo or su
-# #This will allow auditd to get the calling user's uid correctly when calling sudo or su. 
+# #This will allow auditd to get the calling user's uid correctly when calling sudo or su.
 # auditStep="Security.2.1 pam_loginuid.so in /Private/etc/pam.d/login"
 # auditCmd=`grep -E "session\s+required\s+pam_loginuid.so" /Private/Private/etc/pam.d/login`
 # audit_WithOutput "$auditStep" "$auditCmd"

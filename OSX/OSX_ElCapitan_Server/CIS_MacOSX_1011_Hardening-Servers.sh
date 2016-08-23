@@ -37,17 +37,17 @@ defaults write /Library/Preferences/com.apple.commerce AutoUpdateRestartRequired
 #####################################################################
 #2 System Preferences#################################################
 #no bluetooth on servers
-# 
+#
 # echo "2 System Preferences"
 # echo "2.1 Bluetooth"
 # echo "2.1.1 Disable Bluetooth, if no paired devices exist"
-# defaults write /Library/Preferences/com.apple.Bluetooth \ ControllerPowerState -int 0 
+# defaults write /Library/Preferences/com.apple.Bluetooth \ ControllerPowerState -int 0
 # killall -HUP blued
 # echo "2.1.2 Disable Bluetooth \"Discoverable\" mode when not pairing devices"
 # /usr/sbin/system_profiler SPBluetoothDataType | grep -i discoverable
 # echo "If query returns \"Discoverable: On\" you need to turn discoverable off."
 # echo "Starting with OS X (10.9) Bluetooth is only set to Discoverable when the Bluetooth System Preference is selected. To ensure that the computer is not Discoverable do not leave that preference open."
-# echo "2.1.3 Show Bluetooth status in menu bar"	
+# echo "2.1.3 Show Bluetooth status in menu bar"
 # defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"###############################
 ###############################
 # echo "2.2 Date & Time"
@@ -115,7 +115,7 @@ rm -r disableSharing.scpt
 # Note: The -c flag means "wall power." Different settings must be used for other power sources.
 #pmset -c displaysleep 0
 
-#echo "2.3.4 Set a screen corner to Start Screen Saver"	
+#echo "2.3.4 Set a screen corner to Start Screen Saver"
 # In System Preferences: Desktop & Screen Saver: Screen Saver: Hot Corners, make sure at least one Active Screen Corner is set to Start Screen Saver. Make sure the user knows about this feature.
 # The screen corners can be set using the defaults command, but the permutations of combinations are many. The plist file to check is ~/Library/Preferences/com.apple.dock and the keys are wvous-bl-corner wvous-br-corner wvous-tl-corner wvous-tr-corner
 # There are also modifier keys to check and various values for each of these keys. A value of 5 means the corner will start the screen saver. The corresponding wvous-xx-modifier key should be set to 0.
@@ -217,7 +217,7 @@ rm -r disableSharing.scpt
 #echo "2.4.5 Disable Remote Login"
 #systemsetup -f -setremotelogin off
 
-echo "2.4.6 Disable DVD or CD Sharing"	
+echo "2.4.6 Disable DVD or CD Sharing"
 echo "There should be no results"
 # Perform the following to implement the prescribed state:
 # 	1. Open System Preferences
@@ -309,7 +309,7 @@ rm -r disableSharing.scpt
 # echo "2.5.1 Disable \"Wake for network access\""
 # pmset -a womp 0
 
-echo "2.5.2 Disable sleeping the computer when connected to power"	
+echo "2.5.2 Disable sleeping the computer when connected to power"
 pmset -c sleep 0
 ###############################
 echo "2.6 Security & Privacy"
@@ -358,7 +358,7 @@ defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 # echo "List all firewall exceptions"
 # /usr/libexec/ApplicationFirewall/socketfilterfw --listapps
 # Edit and run the following command in Terminal to remove specific applications: /usr/libexec/ApplicationFirewall/socketfilterfw --remove </Applications/badapp.app>
-# Where </Applications/badapp.app> is the one to be removed	
+# Where </Applications/badapp.app> is the one to be removed
 ###############################
 # echo "2.7 iCloud"
 # echo "2.7.1 iCloud configuration"
@@ -465,7 +465,7 @@ echo "4.5 Ensure nfs server is not running"
 nfsd disable
 rm /etc/export
 ##############################################################
-#5 System Access, Authentication and Authorization	
+#5 System Access, Authentication and Authorization
 echo "5 System Access, Authentication and Authorization"
 echo "5.1 File System Permissions and Access Controls"
 echo "5.1.1 Secure Home Folders"
@@ -627,7 +627,7 @@ defaults write com.apple.security.revocation OCSPStyle -string RequireIfPresent
 ###############################
 #echo "5.7 Do not enable the \"root\" account"
 #Open System Preferences, Uses & Groups. Click the lock icon to unlock it. In the Network Account Server section, click Join or Edit. Click Open Directory Utility. Click the lock icon to unlock it. Select the Edit menu > Disable Root User.
-#correctly configured by default on installs. no hardening step required. 
+#correctly configured by default on installs. no hardening step required.
 ###############################
 echo "5.8 Disable automatic login"
 sudo defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser
@@ -686,7 +686,7 @@ sed -ie "s/group=admin,wheel/group=wheel/" /etc/pam.d/screensaver
 # 5. Verify that no text is entered in the Password hint box
 ###############################
 
-echo "5.15 Disable Fast User Switching"	
+echo "5.15 Disable Fast User Switching"
 # since the systems will be on the domain, we are not doing this step
 #In System Preferences: Accounts, Login Options, make sure the "Enable fast user switching" checkbox is off.
 defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool 'NO'
