@@ -39,6 +39,8 @@ These are additional security configuration changes that i suggest be made to ce
  - This script will audit a OSX 10.11 El Capitan system and give you a CIS compliance score based on it's findings.
 - CIS_MacOSX_1011_Hardening-Servers.sh
  - This script will harden a fresh build OSX 10.11 El Capitan system to CIS compliance.
+- CIS_MacOSX_1011_Hardening-Desktops.sh
+ - This script will harden a fresh build OSX 10.11 El Capitan desktop system to CIS compliance. This is based off the server script with additional sections commented out so it is more user friendly rather than server restricted.
 
 ### Additional Security Configurations
 These are additional scripts that i suggest be used on OSX systems. I have included these outside of the CIS hardening script in the event that you do not want to use CIS for compliance but want some benefits of locking down your system anyways.
