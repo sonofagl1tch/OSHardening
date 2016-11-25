@@ -26,6 +26,8 @@ These are additional security configuration changes that i suggest be made to ce
  - Configures the SSH server for most common hardening settings
 - doesUserExist.sh
  - simple test to see if a local user exists
+- linuxAudit.sh
+ - This script was used as an example on different methods to search a linux system
 
 ## OSX
 ### OSX 10.10 Yosemite
@@ -52,3 +54,12 @@ These are additional scripts that i suggest be used on OSX systems. I have inclu
  - This script is used to add a hidden admin user to an OSX system
 - GetLastPasswordModificationTimeOfLocalUser.sh
  - This script is used to This script will query and OSX el capitan system for the last password modification timestamp in mac epoch format
+- macAudit.sh
+ - This script was used as an example on different methods to search a OSX system
+ 
+## Windows
+### Windows 10
+### Additional Security Configurations
+These are additional scripts that i suggest be used on Windows systems. I have included these outside of the CIS hardening script in the event that you do not want to use CIS for compliance but want some benefits of locking down your system anyways.
+- windowsAudit.ps1
+ - This script was used as an example on different methods to search a Windows system
