@@ -1,6 +1,11 @@
 # OSHardening
 This repo contains all of my OS hardening scripts
 
+# Cross over for mac and linux
+ I also use CrossOver to support variou windows based binaries and applications on my osx and linux systems
+ 
+ <a href="http://www.codeweavers.com" title="CodeWeavers - CrossOver: Windows Compatibility on Macintosh and Linux" target="_blank"><img src="https://media.codeweavers.com/pub/crossover/marketing/link_banners/Advocate_200.png" width="125" height="125" alt="CodeWeavers"></a>
+
 ## SANS FOR518
 This directory contains a snippet of my larger OS hardening scripts for the SANS FOR518 class. These changes are specific to OSX bashrc additional logging configuration.
 - AdditionalOSXAppsIUse.csv
